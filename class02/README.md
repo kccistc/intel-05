@@ -38,7 +38,7 @@
 | 03 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 04 JunSuPark (wbfw109v2) | n/a | - | - | - | - | - | max5982 |
 | 05 KwonSiWoo (kwonsiwoo2) | n/a | - | - | - | - | litcoder |
-| 06 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 06 ParkJeongWoo (pjw1702) | n/a | - | - | - | - | litcoder |
 | 07 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 08 JungSangHun (radon99) | n/a | - | - | - | - | litcoder |
 | 09 SeoChangMin (opmaksim) | n/a | - | - | - | - | litcoder |
