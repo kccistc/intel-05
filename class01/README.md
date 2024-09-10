@@ -51,7 +51,7 @@
 | 10 KimDoHa (kimdoha123) | n/a | - | - | - | - | - | max5982 |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 13 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 13 YoonTaeJoon (yspsk1994) | n/a | - | - | - | - | - | max5982 |
 | 14 HanTaeSeop  (HanTaeSeop) | n/a | - | - | - | - | - | max5982 |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 16 KoEuiGeun  (KEG012) | n/a | - | - | - | - | - | mokiya |

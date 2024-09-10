@@ -40,12 +40,12 @@
 | 05 KwonSiWoo (kwonsiwoo2) | n/a | - | - | - | - | litcoder |
 | 06 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 07 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 08 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 08 JungSangHun (radon99) | n/a | - | - | - | - | litcoder |
 | 09 SeoChangMin (opmaksim) | n/a | - | - | - | - | litcoder |
 | 10 KimDoHa (kimdoha123) | n/a | - | - | - | - | litcoder |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 13 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 13 YoonTaeJoon (yspsk1994) | n/a | - | - | - | - | litcoder |
 | 14 HanTaeSeop (HanTaeSeop) | n/a | - | - | - | - | litcoder |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 16 KoEuiGeun  (KEG012) | n/a | - | - | - | - | jerry-jaeseong-lee |
