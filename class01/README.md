@@ -53,7 +53,7 @@
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 13 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 14 HanTaeSeop  (HanTaeSeop) | n/a | - | - | - | - | - | max5982 |
-| 15 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 15 Kimdonghyoun (gim04818) | n/a | - | - | - | - | - | max5982 |
 | 16 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
 | 17 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
 | 18 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
