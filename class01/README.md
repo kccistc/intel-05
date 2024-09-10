@@ -44,7 +44,7 @@
 | 03 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 04 JunSuPark (wbfw109v2) | n/a | - | - | - | - | - | max5982 |
 | 05 KwonSiWoo   (Kwonsiwoo2) | n/a | - | - | - | - | - | max5982 |
-| 06 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 06 ParkJeongWoo (pjw1702) | n/a | - | - | - | - | - | max5982 |
 | 07 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 08 JungSangHun (radon99) | n/a | - | - | - | - | - | max5982 |
 | 09 SeoChangMin (opmaksim) | n/a | - | - | - | - | - | max5982 |
@@ -57,7 +57,7 @@
 | 16 KoEuiGeun  (KEG012) | n/a | - | - | - | - | - | mokiya |
 | 17 ChoiJaeWon (te31eawq) | n/a | - | - | - | - | - | mokiya |
 | 18 JungJinWoo  (JinwooJung) | n/a | - | - | - | - | - | mokiya |
-| 19 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
+| 19 KimJiHwan (12borang) | n/a | - | - | - | - | - | mokiya |
 | 20 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
 | 21 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
 | 22 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
