@@ -40,7 +40,7 @@
 | 영문이름 (GitHub id)           | Team No | HW#1 | HW#2 | HW#3 | HW#4 | HW#5 | Reviewer |
 |-------------------------------|---------|------|------|------|------|------|----------|
 | 01 KimEunChan (Eunchan1578) | n/a | - | - | - | - | - | max5982 |
-| 02 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 02 JungTaeHyeon (JTH119) | n/a | - | - | - | - | - | max5982 |
 | 03 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 04 JunSuPark (wbfw109v2) | n/a | - | - | - | - | - | max5982 |
 | 05 KwonSiWoo   (Kwonsiwoo2) | n/a | - | - | - | - | - | max5982 |
