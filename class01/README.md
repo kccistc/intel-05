@@ -46,7 +46,7 @@
 | 05 KwonSiWoo   (Kwonsiwoo2) | n/a | - | - | - | - | - | max5982 |
 | 06 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 07 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 08 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 08 JungSangHun (radon99) | n/a | - | - | - | - | - | max5982 |
 | 09 SeoChangMin (opmaksim) | n/a | - | - | - | - | - | max5982 |
 | 10 KimDoHa (kimdoha123) | n/a | - | - | - | - | - | max5982 |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
