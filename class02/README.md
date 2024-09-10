@@ -1,4 +1,4 @@
-# Class 01
+# Class 02
 
 * AI (Train / Inference) & OpenVINO 강의 및 실습
 
@@ -10,11 +10,11 @@
 
 2. 강사가 생성한 `Milestone`에 생성된 Issue에 추가 
 
-3. `class01/homework`내 본인 `영문이름`으로 되어 있는 디렉토리내에 `hw1`, `hw2`, `hw3`, `hw4` 중 하나의 디렉토리 생성
+3. `class02/homework`내 본인 `영문이름`으로 되어 있는 디렉토리내에 `hw1`, `hw2`, `hw3`, `hw4` 중 하나의 디렉토리 생성
 
     Example)
     ```
-    ./class01
+    ./class02
     └── homework
         └── KimYoungHee
             ├── hw1
@@ -74,5 +74,3 @@
 * Team v:
 * Team a:
 * Team b:
-
-

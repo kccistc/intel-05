@@ -74,5 +74,3 @@
 * Team v:
 * Team a:
 * Team b:
-
-
