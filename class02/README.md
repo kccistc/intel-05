@@ -33,20 +33,20 @@
 
 | 영문이름 (GitHub id)           | Team No | HW#1 | HW#2 | HW#3 | Final | Reviewer |
 |-------------------------------|---------|------|------|------|-------|----------|
-| 01 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 01 KimEunChan (Eunchan1578) | n/a | - | - | - | - | litcoder |
 | 02 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 03 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 04 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 05 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 05 KwonSiWoo (kwonsiwoo2) | n/a | - | - | - | - | litcoder |
 | 06 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 07 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 08 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 09 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 09 SeoChangMin (opmaksim) | n/a | - | - | - | - | litcoder |
 | 10 KimDoHa (kimdoha123) | n/a | - | - | - | - | litcoder |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 13 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 14 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 14 HanTaeSeop (HanTaeSeop) | n/a | - | - | - | - | litcoder |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 16 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
 | 17 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
