@@ -54,7 +54,7 @@
 | 13 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 14 HanTaeSeop (HanTaeSeop) | n/a | - | - | - | - | litcoder |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
-| 16 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
+| 16 KoEuiGeun  (KEG012) | n/a | - | - | - | - | jerry-jaeseong-lee |
 | 17 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
 | 18 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
 | 19 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
