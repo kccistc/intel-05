@@ -8,7 +8,7 @@
 
 1. 과제 제출을 위해 `인텔교육 5기 Github repository`에서 `New Issue` 생성
 
-2. 강사가 생성한 `Milestone`에 생성된 Issue에 추가 
+2. 강사가 생성한 `Milestone`에 생성된 Issue에 추가
 
 3. `class01/homework`내 본인 `영문이름`으로 되어 있는 디렉토리내에 `hw1`, `hw2`, `hw3`, `hw4` 중 하나의 디렉토리 생성
 
@@ -39,20 +39,20 @@
 
 | 영문이름 (GitHub id)           | Team No | HW#1 | HW#2 | HW#3 | HW#4 | HW#5 | Reviewer |
 |-------------------------------|---------|------|------|------|------|------|----------|
-| 01 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 01 KimEunChan (Eunchan1578) | n/a | - | - | - | - | - | max5982 |
 | 02 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 03 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 04 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 05 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 05 KwonSiWoo   (Kwonsiwoo2) | n/a | - | - | - | - | - | max5982 |
 | 06 ParkJeongWoo (pjw1702) | n/a | - | - | - | - | - | max5982 |
 | 07 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 08 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 09 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 10 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 08 JungSangHun (radon99) | n/a | - | - | - | - | - | max5982 |
+| 09 SeoChangMin (opmaksim) | n/a | - | - | - | - | - | max5982 |
+| 10 KimDoHa (kimdoha123) | n/a | - | - | - | - | - | max5982 |
 | 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 13 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
-| 14 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 14 HanTaeSeop  (HanTaeSeop) | n/a | - | - | - | - | - | max5982 |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 16 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
 | 17 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
@@ -72,6 +72,3 @@
 * Team z:
 * Team w:
 * Team v:
-* Team a:
-* Team b:
-
