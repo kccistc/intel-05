@@ -43,7 +43,7 @@
 | 08 JungSangHun (radon99) | n/a | - | - | - | - | litcoder |
 | 09 SeoChangMin (opmaksim) | n/a | - | - | - | - | litcoder |
 | 10 KimDoHa (kimdoha123) | n/a | - | - | - | - | litcoder |
-| 11 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
+| 11 ChoiJeongHo1 (Davi-kr) | n/a | - | - | - | - | litcoder |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | litcoder |
 | 13 YoonTaeJoon (yspsk1994) | n/a | - | - | - | - | litcoder |
 | 14 HanTaeSeop (HanTaeSeop) | n/a | - | - | - | - | litcoder |

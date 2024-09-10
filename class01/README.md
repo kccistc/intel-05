@@ -49,7 +49,7 @@
 | 08 JungSangHun (radon99) | n/a | - | - | - | - | - | max5982 |
 | 09 SeoChangMin (opmaksim) | n/a | - | - | - | - | - | max5982 |
 | 10 KimDoHa (kimdoha123) | n/a | - | - | - | - | - | max5982 |
-| 11 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 11 ChoiJeongHo1 (Davi-kr) | n/a | - | - | - | - | - | max5982 |
 | 12 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 13 YoonTaeJoon (yspsk1994) | n/a | - | - | - | - | - | max5982 |
 | 14 HanTaeSeop  (HanTaeSeop) | n/a | - | - | - | - | - | max5982 |
