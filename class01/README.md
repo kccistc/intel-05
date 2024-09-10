@@ -53,7 +53,7 @@
 | 12 Jomyeonggeun (myeongeunJo) | n/a | - | - | - | - | - | max5982 |
 | 13 YoonTaeJoon (yspsk1994) | n/a | - | - | - | - | - | max5982 |
 | 14 HanTaeSeop  (HanTaeSeop) | n/a | - | - | - | - | - | max5982 |
-| 15 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
+| 15 Kimdonghyoun (gim04818) | n/a | - | - | - | - | - | max5982 |
 | 16 KoEuiGeun  (KEG012) | n/a | - | - | - | - | - | mokiya |
 | 17 ChoiJaeWon (te31eawq) | n/a | - | - | - | - | - | mokiya |
 | 18 JungJinWoo  (JinwooJung) | n/a | - | - | - | - | - | mokiya |
