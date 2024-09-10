@@ -55,7 +55,7 @@
 | 14 HanTaeSeop  (HanTaeSeop) | n/a | - | - | - | - | - | max5982 |
 | 15 KimYoungHee (abcde) | n/a | - | - | - | - | - | max5982 |
 | 16 KoEuiGeun  (KEG012) | n/a | - | - | - | - | - | mokiya |
-| 17 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
+| 17 ChoiJaeWon (te31eawq) | n/a | - | - | - | - | - | mokiya |
 | 18 JungJinWoo  (JinwooJung) | n/a | - | - | - | - | - | mokiya |
 | 19 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
 | 20 KimYoungHee (abcde) | n/a | - | - | - | - | - | mokiya |
