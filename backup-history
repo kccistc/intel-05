@@ -1,0 +1,589 @@
+    1  cat /etc/os-release
+    2  uname -a
+    3  ip a
+    4  ping www.google.com
+    5  sudo apt update
+    6  sudo apt upgrade -y
+    7  sudo apt install -y build-essential software-properties-common vim terminator
+    8  gcc git git-all make cmake htop net-tools tree mplayer mesa-utils intel-opencl-icd
+    9  python3-dev python3-pip python3-setuptools python3-venv
+   10  sudo apt update
+   11  sudo apt install software-properties-common apt-transport-https wget
+   12  wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+   13  sudo add-apt-repository “deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main”
+   14  sudo apt install code
+   15  code
+   16  sudo apt install code
+   17  sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+   18  sudo apt install code
+   19  code
+   20  mkdir workspace
+   21  cd workspace/
+   22  python3 -m venv .env
+   23  sudo apt install python3.10-venv
+   24  python3 -m venv .env
+   25  source .env/bin/activate
+   26  pip --version
+   27  pip install -U pip
+   28  deactivate
+   29  python3 -m venv openvino_env
+   30  source openvino_env/bin/activate
+   31  python -m pip install --upgrade pip
+   32  pip install openvino==2024.3.0
+   33  git clone --depth=1 https://github.com/openvinotoolkit/openvino_notebooks.git
+   34  ls
+   35  cd openvino_notebooks
+   36  ls
+   37  pip install -U pip
+   38  pip install wheel setuptools
+   39  code requirements.txt
+   40  pip install -r requirements.txt
+   41  jupyter lab notebooks
+   42  git remote -v
+   43  git fetch origin 2024.0
+   44  sudo apt install ./naver-whale-stable_amd64.deb
+   45  git clone https://github.com/kccistc/intel-05.git
+   46  sudo apt install git
+   47  git clone https://github.com/kccistc/intel-05.git
+   48  cd intel-05
+   49  ls -al
+   50  touch test.py
+   51  python3 test.py
+   52  mkdir -p python_test
+   53  cd python_test
+   54  code.
+   55  code .
+   56  /bin/python3
+   57  /bin/python3 /home/liam/workspace/git-training/project-x/Hello_git.py
+   58  clear
+   59  sudo apt install -y
+   60  --install-recommends winehq-stable
+   61  sudo apt install -y --install-recommends winehq-stable
+   62  winecfg
+   63  sudo apt install -y --install-recommmends winehq-stable
+   64  sudo apt install -y --install -recommmends winehq-stable
+   65  sudo apt install -recommmends winehq-stable
+   66  sudo apt install-recommmends winehq-stable
+   67  sudo apt install -y
+   68  sudo apt install -y --install-recommends winehq-stable
+   69  sudo apt-get update
+   70  sudo apt install -y --install-recommends winehq-stable
+   71  sudo apt install -y --install-recommends winehq -stable
+   72  sudo apt install -y --install-recommends winehq-stable
+   73  sudo dpkg --add-architecture i386
+   74  sudo apt install -y wget
+   75  cd /etc/apt/keyrings
+   76  ls
+   77  sudo apt install -y --install-recommends winehq-stable
+   78  ls
+   79  sudo wget - NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
+   80  sudo apt-get update
+   81  sudo apt install -y --install-recommends winehq-stable
+   82  ls
+   83  sudo apt install -y --install -recommends winehq-stable
+   84  sudo apt install -y--install -recommends winehq-stable
+   85  sudo apt install -recommends winehq-stable
+   86  sudo apt install-recommends winehq-stable
+   87  sudo apt --install-recommends winehq-stable
+   88  sudo wget - NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$(lsb_release -cs)/winehq-$(lsb_release -cs
+   89  sudo wget - NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/$(lsb_release -cs)/winehq-$(lsb_release -cs).sources
+   90  sudo apt update
+   91  sudo apt install -y --install-recommends winehq-stable
+   92  sudo wget -NP /etc/apt/source.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
+   93  cd /etc/apt/source.list.d
+   94  ls
+   95  sudo dpkg --add-architecture i386 && sudo mkdir -pm755 /etc/apt/keyrings && sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key && sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources && sudo apt update && sudo apt install --install-recommends winehq-stable
+   96  winecfg
+   97  cd /home/downloads
+   98  cd ..
+   99  ls
+  100  cd ..
+  101  ls
+  102  cd home
+  103  ls
+  104  cd Downloads
+  105  cd ~/Downloads
+  106  ls
+  107  LANG="ko_KR.UTF-8" wine
+  108  winecfg
+  109  cd ~/Download
+  110  LANG="ko_KR.UTF-8" wine KakaoTalk_Setup.exe
+  111  sudo dpkg --add-architecture i386
+  112  sudo apt install -y wget
+  113  sudo mkdir -pm755 /etc/apt/keyrings
+  114  sudo wget -O
+  115  wget --help
+  116  sudo wget -o
+  117  git --version
+  118  git config --global user.name "CHOI JEONG HO"
+  119  git config --global user.email "liam_alejandro_choi@naver.com"
+  120  sudo wget --O
+  121  sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+  122  cat ~/.gitconfig
+  123  sudo wget -NP /etc/apt/source.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
+  124  sudo apt-get update
+  125  sudo apt install -y --install- recommends winehq-stable
+  126  sudo apt install -y --install-recommends winehq-stable
+  127  ls
+  128  cd workspace
+  129  ls
+  130  mkdir git_test
+  131  ls
+  132  cd git_test
+  133  ls
+  134  git init Non_bare_repo
+  135  git init --bare bare_repo
+  136  git clone Bare_reop/ cloned_repo
+  137  git init --bare Bare_repo
+  138  git clone Bare_repo cloned_repo
+  139  rm -rf cloned_repo
+  140  ls
+  141  rm -rf bare_repo
+  142  ls
+  143  cd Bare_repo
+  144  ls
+  145  cd ..
+  146  cd Non_bare_reop
+  147  ls
+  148  cd Non_bare_repo
+  149  ls
+  150  cd ..
+  151  ls
+  152  git clone Bare_repo cloned_repo
+  153  ls
+  154  cd cloned_repo
+  155  ls
+  156  cd
+  157  ls
+  158  cd workspace
+  159  ls
+  160  cd git_test
+  161  ls
+  162  cd..
+  163  ls
+  164  cd ..
+  165  ls
+  166  cd git_test
+  167  ls
+  168  cd ..
+  169  ls
+  170  mkdir git-training
+  171  cd git-training
+  172  ls
+  173  git init --bare my-project.git
+  174  git clone my-project.git project-x
+  175  ls
+  176  cd my-project.git/
+  177  ls
+  178  cd ..
+  179  ls
+  180  cd project-x/
+  181  ls
+  182  cd ..
+  183  cd project-x/
+  184  ls
+  185  ll
+  186  code hello.cpp
+  187  ls
+  188  cp hello.cpp hello2.cpp
+  189  ls
+  190  git add hello.cpp
+  191  git status
+  192  git commit -m "add hello.cpp
+  193  git status
+  194  git commit -m "add hello.cpp"
+  195  git status
+  196  git log
+  197  ll
+  198  ls
+  199  vi .gitignore
+  200  code Hello_Git.cpp
+  201  vi .gitignore
+  202  ls
+  203  code Hello_Git.py
+  204  git add Hello_Git.cpp .gitignore
+  205  git status
+  206  git log
+  207  git log --oneliine
+  208  git log --oneline
+  209  git commit -m "2nd uploaded"
+  210  git log
+  211  git log --oneline
+  212  git revert 2fa04c9
+  213  git log --oneline
+  214  git revert 2fa04c9
+  215  git log --oneline
+  216  git commit -m "4th //"
+  217  git log
+  218  git log --oneline
+  219  git commit -m "4th comminttt"
+  220  git add Hello_Git.py
+  221  git commit -m "4th comminttt"
+  222  ls
+  223  git add Hello_git.py
+  224  git commit -m "4th comminttt"
+  225  git log --oneline
+  226  git status
+  227  git commit -m "py files upload"
+  228  ls
+  229  git status
+  230  git commit -m "Hello_git.py uploaded"
+  231  git add Hello_git.py
+  232  git commit -m "Hello_git.py uploaded"
+  233  git add Hello_Git.py
+  234  git commit -m "Hello_git.py uploaded"
+  235  ls
+  236  git status
+  237  code hello3.cpp
+  238  git add hello3.cpp
+  239  git commit -m "uploaded files hello3.cpp 333"
+  240  git add hello3.cpp
+  241  git commit -m "uploaded files hello3.cpp 333"
+  242  git add hello3.cpp
+  243  git commit -m "uploaded files hello3.cpp 333"
+  244  git log --oneline
+  245  ㅊㅇ ..
+  246  cd ..
+  247  ls
+  248  git clone my-project.git project-x2
+  249  cd project-x2
+  250  ls
+  251  ll
+  252  code hello.cpp
+  253  git add hello.cpp
+  254  git status
+  255  git commint -m "1st uploaded"
+  256  git commit -m "1st uploaded"
+  257  git log
+  258  git log --oneline
+  259  git status
+  260  git log
+  261  git status
+  262  git add hello.cpp
+  263  git status
+  264  git commit -m "2nd rewrited : gggggg"
+  265  git log
+  266  git log --oneline
+  267  git status
+  268  git add hello.cpp
+  269  git status
+  270  git commit -m "3rd commit: changing gggg -> Intel"
+  271  git status
+  272  git log
+  273  git status
+  274  git add hello.cpp
+  275  git commit -m "444444"
+  276  git log --oneline
+  277  git revert 062ccad
+  278  git status
+  279  git add .
+  280  git commit -m "revert modified"
+  281  git status
+  282  git log --oneline
+  283  code
+  284  git remote -v
+  285  ll
+  286  git push origin HEAD:master
+  287  git branch branch1
+  288  git branch
+  289  git checkout branch1
+  290  git branch
+  291  git push orgin HEAD:branch1
+  292  ls
+  293  ;;
+  294  ll
+  295  git push origin HEAD:branch1
+  296  git branch
+  297  git checkout master
+  298  git log --oneline
+  299  git branch
+  300  git push origin HEAD:8c946b4
+  301  git remote -v
+  302  cd ..
+  303  ls
+  304  cd my-project.git/
+  305  ls
+  306  ll
+  307  git log --oneline
+  308  cd ..
+  309  ls
+  310  cd project-x
+  311  ls
+  312  git branch
+  313  cd ..
+  314  cd project-x2
+  315  git branch
+  316  cd ..
+  317  ls
+  318  cd ..
+  319  ls
+  320  cd git_test
+  321  ls
+  322  cd ..
+  323  ls
+  324  cd git-training/
+  325  ls
+  326  winecfg
+  327  LC_ALL=ko_KR.UTF-8 wine 카카오톡설치파일.exe
+  328  cd ~/Downloads
+  329  LC_ALL=ko_KR.UTF-8 wine 카카오톡설치파일.exe
+  330  LC_ALL=ko_KR.UTF-8 wine KakaoTalk_Setup.exe
+  331  ㅣㄴ
+  332  ls
+  333  cd workspace
+  334  ls
+  335  cd git-traning
+  336  cd git-training/
+  337  ls
+  338  cd project-x
+  339  ls
+  340  git branch
+  341  cd ..
+  342  cd project-x2
+  343  ls
+  344  git branch
+  345  cd ..
+  346  cd project-x
+  347  ls
+  348  git log --oneline
+  349  git branch
+  350  git branch branch11
+  351  git branch
+  352  gh auth login
+  353  sudo apt  install gh
+  354  gh auth login
+  355  cd workspace
+  356  mkdir github_test
+  357  cd github_test
+  358  git clone https://github.com/Davi-kr/my-project.git
+  359  ll
+  360  cd ..
+  361  ls
+  362  cd git_test
+  363  ls
+  364  cd ..
+  365  cd git_traning
+  366  cd git-training/
+  367  ls
+  368  cd my-project.git/
+  369  ls
+  370  git remote -v
+  371  ls
+  372  git branch
+  373  cd ..
+  374  git init --bare my-project
+  375  ll
+  376  cd my-project
+  377  ll
+  378  git log
+  379  clear
+  380  cd ..
+  381  ls
+  382  git init --bare my-project2.git
+  383  ls
+  384  cd ~/git-training
+  385  cd ..
+  386  ls
+  387  ~/git-training
+  388  ls
+  389  cd git-training/
+  390  cd ..
+  391  ls
+  392  cd ~/git-training
+  393  cd workspace
+  394  ls
+  395  cd ..
+  396  cd ~/git-training
+  397  cd ~/workspace/git-training
+  398  ls
+  399  cd my-project2.git
+  400  git remote -v
+  401  git checkout main
+  402  ls
+  403  cd ..
+  404  ls
+  405  git branch
+  406  ls
+  407  cd my-project2.git
+  408  git branch
+  409  cd ..
+  410  ls
+  411  git clone my-project2.git project-z
+  412  cd ./project-z
+  413  ls
+  414  ll
+  415  git branch
+  416  git remote add https://github.com/Davi-kr/my-project.git
+  417  git remote add github https://github.com/Davi-kr/my-project.git
+  418  git remote -v
+  419  git branch
+  420  git brand -M main
+  421  git push -u github main
+  422  git remote -v
+  423  git branch
+  424  git checkout main
+  425  git checkout branch main
+  426  git branch -M main
+  427  git branch
+  428  git push -u github main
+  429  git pull origin main
+  430  git add .
+  431  git status
+  432  git branch
+  433  git pull github
+  434  git branch
+  435  git pull github MAIN
+  436  git pull github main
+  437  git branch
+  438  git push origin main
+  439  cd ..
+  440  ls
+  441  cd my-project2.git
+  442  git branch
+  443  git clone --help
+  444  ls
+  445  cd ..
+  446  ls
+  447  cd ..
+  448  ls
+  449  cd git_test
+  450  ls
+  451  cd ..
+  452  cd git-training
+  453  ls
+  454  my-project.git
+  455  ls
+  456  cd myproject.git
+  457  ls
+  458  cd my-project.git
+  459  ls
+  460  cd ..
+  461  cd my-project-x
+  462  ls
+  463  cd project-x
+  464  ls
+  465  cd ..
+  466  cd project-x2
+  467  ls
+  468  cd ..
+  469  cd my-project
+  470  ls
+  471  cd ..
+  472  ls
+  473  cd github_test
+  474  ls
+  475  cd ..
+  476  ls
+  477  cd ..
+  478  ls
+  479  cd ..
+  480  ls
+  481  cd liam
+  482  ls
+  483  cd workspace
+  484  ls
+  485  cd github_test
+  486  ls
+  487  git clone https://github.com/kccistc/intel-05.git
+  488  ls
+  489  cd intel-05
+  490  ls
+  491  cd class01
+  492  ls
+  493  cd homework
+  494  ls
+  495  mkdir JHChoi
+  496  cd JHChoi
+  497  ls
+  498  touch README.md
+  499  cd ..
+  500  cd class002
+  501  ls
+  502  cd class02
+  503  ls
+  504  cd homework
+  505  ls
+  506  mkdir JHChoi
+  507  cd JHChoi/
+  508  touch README.md
+  509  ls
+  510  cd ..
+  511  ks
+  512  ls
+  513  cd intel-05
+  514  ls
+  515  cd class01
+  516  ls
+  517  cd homework
+  518  ls
+  519  cd ../../..
+  520  cd intel-05
+  521  ls
+  522  git status
+  523  git branch
+  524  git branch class01-hw2-cjh
+  525  git branch
+  526  git checkout class01-hw2-cjh
+  527  git branch
+  528  git remote -v
+  529  git push origin class01-hw2-cjh
+  530  git add .
+  531  git commit -m "README.md feat.CHOI JEONG HO"
+  532  git push origin class01-hw2-cjh
+  533  ls
+  534  class01
+  535  ls
+  536  cd class01
+  537  ls
+  538  cd ..
+  539  ls
+  540  mkdir -p class01/homework/cjh
+  541  mkdir -p class02/homework/cjh
+  542  touch class01/homework/cjh/README.md
+  543  touch class02/homework/cjh/README.md
+  544  git status
+  545  git add class01/homework/cjh/README.md
+  546  git status
+  547  git commit -m "class010hw2-Davi-kr
+  548  git commit -m "class010hw2-Davi-kr"
+  549  git status
+  550  git add class02/homework/cjh/README.md
+  551  git commit -m "class020hw2-Davi-kr"
+  552  git status
+  553  git remote -v
+  554  git push origin class01-hw2-cjh
+  555  cat /home/user/.bash_history |grep 'touch'
+  556  ls
+  557  cd /
+  558  cd home
+  559  cd user
+  560  ls
+  561  cd liam
+  562  ls
+  563  cd workspace/github_test/intel-05
+  564  ls
+  565  cat /home/liam/.bash_history |grep 'touch'
+  566  ls
+  567  touch test.py
+  568  cat /home/liam/.bash_history |grep 'touch'
+  569  touch test.py
+  570  history
+  571  ls
+  572  history > backup-history
+  573  ls
+  574  vi backup-history
+  575  history
+  576  ls
+  577  cd workspace
+  578  ls
+  579  cd github_test/intel-05
+  580  ls
+  581  vi backup-history
+  582  history >> backup-history
+  583  vi backup-history
+  584  history > backup-history
+  585  vi backup-history
+  586  cat haha > backup-history
+  587  touch haha > backup-history
+  588  vi backup-history
+  589  history > backup-history
