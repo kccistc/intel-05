@@ -51,7 +51,7 @@
 | 16 KoEuiGeun  (KEG012) | n/a | - | - | - | - | jerry-jaeseong-lee |
 | 17 ChoiJaeWon (te31eawq) | n/a | - | - | - | - | jerry-jaeseong-lee |
 | 18 JungJinWoo (JinwooJung) | n/a | - | - | - | - | jerry-jaeseong-lee |
-| 19 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
+| 19 KimJiHwan (12borang) | n/a | - | - | - | - | - | mokiya |
 | 20 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
 | 21 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
 | 22 KimYoungHee (abcde) | n/a | - | - | - | - | jerry-jaeseong-lee |
