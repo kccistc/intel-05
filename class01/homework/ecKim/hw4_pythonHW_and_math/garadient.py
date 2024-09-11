@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pylab as plt
+x=np.linspace(-2,2,11)
+y=np.linspace(-2,2,11)
+
+print(x)
+print(y)
+
+x,y=np.meshgrid(x,y)
+print(x)
+print(y)
+
+f = lambda x,y : (x-1)**2+(y-1)**2
+z= f(x,y)
+print(z)
+
+grad_f_x=lambda x,y : 2*(x-1)
+grad_f_y=lambda x,y : 2*(y-1)
+
+dz_dx = grad_f_x(x,y)
+dz_dy = 
