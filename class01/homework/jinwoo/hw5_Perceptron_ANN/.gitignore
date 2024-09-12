@@ -1,0 +1,10 @@
+*mnist*
+
+!*.py
+
+!*.jpg
+!*.jpeg
+!*.png
+!*.gif
+
+
