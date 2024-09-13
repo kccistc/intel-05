@@ -35,10 +35,10 @@ model.add(tf.keras.layers.Dense(128, activation='sigmoid'))
 model.add(tf.keras.layers.Dense(10, activation='softmax'))
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics= ['accuracy'] )
-history = model.fit(image_train, label_train, validation_data = val_dataset, epochs=10, batch_size=10)
-
-with open('history_cnn_no_batch', 'wb') as file_pi:
-    pickle.dump(history.history, file_pi)
+history = model.fit(image_train, label_train, validation_data = val_dataset, epochs=30, batch_size=10)
 
 model.summary()
-model.save('cnn_no_batch.h5')    
+model.save('cnn_no_batch.h5')
+
+with open('historyNoBatchSig', 'wb') as file_pi:
+    pickle.dump(history.history, file_pi)
