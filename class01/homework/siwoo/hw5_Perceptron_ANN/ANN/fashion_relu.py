@@ -20,8 +20,7 @@ class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
 model = keras.Sequential()
-model.add(tf.keras.layers.Conv2D(32,(2,2),activation="relu",
-input_shape=(28,28,1)))
+model.add(tf.keras.layers.Conv2D(32,(2,2),activation="relu", input_shape=(28,28,1)))
 model.add(tf.keras.layers.Conv2D(64,(2,2),activation="relu"))
 model.add(tf.keras.layers.Conv2D(128,(2,2),2,activation="relu"))
 model.add(tf.keras.layers.Conv2D(32,(2,2),activation="relu"))
@@ -33,7 +32,7 @@ model.add(tf.keras.layers.Dense(128,activation="sigmoid"))
 model.add(tf.keras.layers.Dense(10,activation="softmax"))
 
 model.compile( optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'],)
-history = model.fit(image_train, label_train, validation_data = val_dataset, epochs=10, batch_size=10)
+history = model.fit(image_train, label_train, validation_data = val_dataset, epochs=30, batch_size=10)
 
 with open('history_mnist_fashion_relu', 'wb') as file_pi:
     pickle.dump(history.history, file_pi)
