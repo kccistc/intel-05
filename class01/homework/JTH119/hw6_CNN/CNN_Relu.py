@@ -53,7 +53,7 @@ model.compile(
     
 )
 
-history = model.fit(image_train, label_train, validation_data = val_dataset, epochs=10, batch_size=10)
+history = model.fit(image_train, label_train, validation_data = val_dataset, epochs=30, batch_size=10)
 with open('history_fashion_Relu_s','wb') as file_pi:
     pickle.dump(history.history, file_pi)
 
