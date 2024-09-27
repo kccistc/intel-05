@@ -30,8 +30,10 @@ while True:
         # 신뢰도(confidence) 표시
         label = f"Person {conf:.2f}"
         cv2.putText(frame, label, (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+        
+        cropped_person = frame[int(y1):int(y2), int(x1):int(x2)]
 
-    # 결과 프레임 출력
+    # 결과 프레임 출력ㅂ
     cv2.imshow('YOLOv5 - Person Detection', frame)
 
     key = cv2.waitKey(24)
