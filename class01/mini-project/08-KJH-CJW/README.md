@@ -32,3 +32,5 @@
 # 고찰
 1. 카메라가 가려지면 대상을 다시 인식하지 못하는 문제점
 2. 사람이 지나갈 때 대상과 카메라 사이로 이동하게 될 시 대상이 바뀌거나 다시 찾지 못하는 문제점
+##
+# [발표자료](https://www.canva.com/design/DAGR7YhoSf0/F-_0aJgYyVEeE8BF-CIA-w/edit?utm_content=DAGR7YhoSf0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
