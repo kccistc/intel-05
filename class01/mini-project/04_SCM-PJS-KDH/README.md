@@ -7,8 +7,8 @@
 
 ## 프로젝트 배경
 차량 고장 등 도로에서 불가피하게 차량을 움직일 수 없을 때 사람의 수신호를 인식하여 사고를 예방하기 위함
-- ![image](https://github.com/user-attachments/assets/f9269aaf-fb24-4ef4-b2e1-c02d0b18750b)
-- ![image](https://github.com/user-attachments/assets/71840e94-e016-48af-8e27-574afef61611)
+- ![image](images/ex1.png)
+- ![image](images/ex2.png)
 
 
 ## 프로젝트 개요
@@ -17,7 +17,7 @@
 이 시스템은 두 가지 주요 모델을 사용하여 동작합니다: **포즈 인식 모델**과 **모노 뎁스(mono-depth) 모델**입니다.
 
 ## 프로젝트 아키텍쳐
-![미니프로젝트 아키텍쳐 drawio](https://github.com/user-attachments/assets/b22eb5b6-36b7-4f27-bbce-e5526387d7de)
+![미니프로젝트 아키텍쳐 drawio](images/mini-project.png)
 
 
 ## 사용된 모델
@@ -36,6 +36,9 @@
 ## 프로젝트 구조
 ```
 project-root/
+│
+├── images/
+│   ├── images....      #관련 이미지들
 │
 ├── src/
 │   ├── human-pose-estimation.py      # 포즈 인식 관련 코드
@@ -65,7 +68,7 @@ project-root/
 ### 3. 코드 실행
 - **포즈 인식 및 깊이 감지**를 위한 Python 코드 실행:
   ```bash
-  python src/pose_estimation.py
+  python src/human-pose_estimation.py
   ```
 
 ### 4. Arduino에서 모터 제어 코드 업로드
@@ -76,24 +79,27 @@ project-root/
 ### Human Pose-Estimation 좌표 기반으로 네 가지 수신호 인식
 
 1. Stop
-- ![Stop Signal](images/screenshot_stop.png)
+- ![Stop Signal](images/stop.png)
 
 2. Slowly
-- ![Slowly Signal](images/screenshot_slowly.png)
+- ![Slowly Signal](images/slowly.png)
 
 3. Go Left
-- ![Go Left Signal](images/screenshot_go_left.png)
+- ![Go Left Signal](images/left.png)
 
 4. Go Right
-- ![Go Right Signal](images/screenshot_go_right.png)
+- ![Go Right Signal](images/right.png)
 
 ### 각 수신호에 따른 모터 제어
 
 1. Stop
-- ![Stop Motor](images/motor_stop.png)
+- ![Stop Motor](images/stop.gif)
 
 2. Slowly
-- ![Slowly Motor](images/motor_slowly.png)
+- ![Slowly Motor](images/slowly.gif)
 
 3. Go Right, Left
-- ![Turn Motor](images/motor_turn.png)
+- ![Turn Motor](images/turn.gif)
+
+### mono-depth를 이용한 거리 탐지 후 알람 표시
+- ![Detect object](images/detect.gif)
