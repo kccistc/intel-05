@@ -1,6 +1,8 @@
 
 # 개요 및 소개
 
+<br> 
+
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Dongle&size=60&pause=1000&color=F249F7&background=FFFFFF8D&repeat=false&random=false&width=800&lines=Hand+gesture+classification,+%EC%86%90%EC%9C%BC%EB%A1%9C+%EB%A7%90%ED%95%B4%EC%9A%94)](https://git.io/typing-svg)
 
 <br>   
@@ -16,12 +18,14 @@
      
 <br>  
 
-   
-<br>   
+  
    
 # 프로젝트 문제 정의
+
 “해외여행객 247% 급증… 해외여행 열풍 올해도 이어지나”
+
 “폭염 속 ‘12시간 근무’ 골프장 캐디…. ‘기절.화상이 일상’ ”
+
 "대형마트 장애인용 쇼핑카트 의무화… 당사자에겐 유명무실” 
 
 - #### 현대 사회에서 개인의 짐을 옮길 상황이 증가하고 있으며, 이러한 상황에서 물체를 안전하고 효율적으로 운반함으로써 고객에게 편리한 경험을 제공
@@ -39,7 +43,7 @@
 
    
 # 시스템 디자인 구상도
-![Untitled Diagram drawio](https://github.com/kccistc/intel-04/assets/165994180/50373d35-aadc-4579-9411-e2de5274a67a)
+![KakaoTalk_20240927_125935085](https://github.com/user-attachments/assets/5f1ec6b8-5e50-4f8e-ab7b-af4a315b613f)
 
 - ##### 추후 보강
    
@@ -64,22 +68,12 @@
 <br>   
    
 ### 1. 로보플로우의 오픈 데이터셋을 사용하여 제스처 인식 모델 생성
-
-
-<br>   
-   
+  
 ### 2. 주먹 가위 보 세가지 class로 직접찍은 사진을 분류한 후 이미지 특징에 따라 제스처 분류 모델 생성
-
-   
-<br>   
-   
+ 
 ### 3. pre training 된 제스처 인식 모델 사용
-
-   
-<br>   
    
 ### 4. 특정 제스처 몇초이상 인식시 이벤트가 발생하는 코드 추가
-
    
 <br>   
    
@@ -97,12 +91,8 @@
 ![스크린샷 2024-09-27 13-11-30](https://github.com/user-attachments/assets/1980760e-bc46-4b1f-ab34-7331cc6ecbf8)
 
 
-
-
 - ### 미디어 파이프 사용
 ![스크린샷 2024-09-27 09-53-59](https://github.com/user-attachments/assets/75f8b993-f06a-444b-9a69-712995e3b4f0)
-
-
 
 
 - ### 이벤트 처리 영상
