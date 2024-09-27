@@ -1,10 +1,71 @@
+# 필요한 라이브러리 import
+import requests
+import time
+from pathlib import Path
 import cv2
+import matplotlib.cm
+import matplotlib.pyplot as plt
 import numpy as np
 import openvino as ov
-import threading
+from notebook_utils import device_widget, download_file, load_image
 import tkinter as tk
-import matplotlib.cm
-import time
+import threading
+from typing import Optional
+import openvino.properties as props
+
+# 모델 다운로드 경로 및 설정
+model_folder = Path("../model")
+ir_model_url = "https://storage.openvinotoolkit.org/repositories/openvino_notebooks/models/depth-estimation-midas/FP32/"
+ir_model_name_xml = "MiDaS_small.xml"
+ir_model_name_bin = "MiDaS_small.bin"
+
+# 모델 다운로드
+download_file(ir_model_url + ir_model_name_xml, filename=ir_model_name_xml, directory=model_folder)
+download_file(ir_model_url + ir_model_name_bin, filename=ir_model_name_bin, directory=model_folder)
+
+# 모델 경로 설정
+model_xml_path = model_folder / ir_model_name_xml
+
+# 유틸리티 함수들 정의
+def normalize_minmax(data):
+    """Normalizes the values in `data` between 0 and 1"""
+    return (data - data.min()) / (data.max() - data.min())
+
+def convert_result_to_image(result, colormap="viridis"):
+    """Convert network result of floating point numbers to an RGB image."""
+    cmap = matplotlib.cm.get_cmap(colormap)
+    result = result.squeeze(0)
+    result = normalize_minmax(result)
+    result = cmap(result)[:, :, :3] * 255
+    result = result.astype(np.uint8)
+    return result
+
+def to_rgb(image_data) -> np.ndarray:
+    """Convert image_data from BGR to RGB"""
+    return cv2.cvtColor(image_data, cv2.COLOR_BGR2RGB)
+
+def detect_closer_object(depth_map: np.ndarray, threshold: float = 0.2) -> bool:
+    """Detect if any object in the scene is closer than the threshold."""
+    if np.min(depth_map) < threshold:
+        return True
+    return False
+
+
+# 장치 설정 및 모델 컴파일
+device = device_widget()
+cache_folder = Path("cache")
+cache_folder.mkdir(exist_ok=True)
+
+core = ov.Core()
+core.set_property({props.cache_dir(): cache_folder})
+model = core.read_model(model_xml_path)
+compiled_model = core.compile_model(model=model, device_name=device.value)
+
+input_key = compiled_model.input(0)
+output_key = compiled_model.output(0)
+
+network_input_shape = list(input_key.shape)
+network_image_height, network_image_width = network_input_shape[2:]
 
 
 # Warning popup function
@@ -30,7 +91,7 @@ def normalize_minmax(data):
 
 
 def convert_result_to_image(result, colormap="viridis"):
-    cmap = matplotlib.cm.get_cmap(colormap)
+    cmap = matplotlib.cm.get_cmap(coqormap)
     result = result.squeeze(0)
     result = normalize_minmax(result)
     result = cmap(result)[:, :, :3] * 255
@@ -86,3 +147,4 @@ def process_stream_with_warning():
 
 # 함수 실행
 process_stream_with_warning()
+

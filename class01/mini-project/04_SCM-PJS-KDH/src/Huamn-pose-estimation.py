@@ -35,7 +35,7 @@ def send_command_to_arduino(command):
         last_command_time = current_time
 
 #A directory where the model will be downloaded.
-base_model_dir = Path("model")
+base_model_dir = Path("../model")
 
 # The name of the model from Open Model Zoo.
 model_name = "human-pose-estimation-0001"
