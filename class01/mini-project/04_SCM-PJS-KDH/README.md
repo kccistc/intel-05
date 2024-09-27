@@ -103,3 +103,6 @@ project-root/
 
 ### mono-depth를 이용한 거리 탐지 후 알람 표시
 - ![Detect object](images/detect.gif)
+
+## 발표 자료
+- [바로 가기](https://www.canva.com/design/DAGR7OjcVNo/ehu66mW8LJn-WiH2b8R30Q/edit?utm_content=DAGR7OjcVNo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
