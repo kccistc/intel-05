@@ -1,4 +1,9 @@
 
+
+
+#%%
+
+import torch
 import collections
 import time
 from pathlib import Path
@@ -39,6 +44,8 @@ if not model_path.exists():
     )
 
 device_name = "CPU"
+
+human_model = torch.hub.load("ultralytics/yolov5", "yolov5s")
 
 # Initialize OpenVINO Runtime
 core = ov.Core()
@@ -482,6 +489,52 @@ default_skeleton = (
     (4, 6),
 )
 
+def draw_poses(img, poses, point_score_threshold, x_offset, y_offset, skeleton=None):
+    if poses.size == 0:
+        return img
+
+    img_limbs = np.copy(img)
+    for pose in poses:
+        points = pose[:, :2].astype(np.int32)  # 좌표
+        points_scores = pose[:, 2]  # 점수
+        
+        # 오른쪽 어깨 (5), 왼쪽 어깨 (6), 오른쪽 골반 (11), 왼쪽 골반 (12)
+        right_shoulder_idx = 5
+        left_shoulder_idx = 6
+        right_hip_idx = 11
+        left_hip_idx = 12
+        
+        keypoints = [right_shoulder_idx, left_shoulder_idx, right_hip_idx, left_hip_idx]
+
+        # Draw joints (only shoulders and hips).
+        for i in keypoints:
+            p = points[i]
+            v = points_scores[i]
+            if v > point_score_threshold:
+                cv2.circle(img, (p[0] + x_offset, p[1] + y_offset), 5, (0, 255, 0), -1) 
+
+        # 점수 체크 (어깨와 골반이 threshold 이상일 때만 그리기)
+        if (points_scores[right_shoulder_idx] > point_score_threshold and 
+            points_scores[left_shoulder_idx] > point_score_threshold and
+            points_scores[right_hip_idx] > point_score_threshold and 
+            points_scores[left_hip_idx] > point_score_threshold):
+            
+            # 필요한 좌표
+            right_hip = points[right_hip_idx] 
+            left_hip_x = points[left_hip_idx][0] 
+            left_shoulder_y = max(points[right_shoulder_idx][1], points[left_shoulder_idx][1])
+                        
+            # 사각형의 왼쪽 위와 오른쪽 아래 좌표 설정
+            top_left = (left_hip_x + x_offset, left_shoulder_y + y_offset) 
+            bottom_right = (right_hip[0] + x_offset, right_hip[1] + y_offset) 
+            
+            # 사각형 그리기
+            cv2.rectangle(img, top_left, bottom_right, (255, 0, 0), 2)  # 파란색 사각형
+
+    return img
+
+
+"""
 def draw_poses(img, poses, point_score_threshold, skeleton=None):
     if poses.size == 0:
         return img
@@ -525,7 +578,7 @@ def draw_poses(img, poses, point_score_threshold, skeleton=None):
             cv2.rectangle(img, top_left, bottom_right, (255, 0, 0), 2)  # 파란색 사각형
 
     return img
-
+"""
 # Main processing function to run pose estimation.
 def run_pose_estimation(source=0, flip=False, use_popup=False, skip_first_frames=0):
     pafs_output_key = compiled_model.output("Mconv7_stage2_L1")
@@ -552,11 +605,34 @@ def run_pose_estimation(source=0, flip=False, use_popup=False, skip_first_frames
             scale = 1280 / max(frame.shape)
             if scale < 1:
                 frame = cv2.resize(frame, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
+            
+            # YOLO 모델로 사람 탐지
+            results = human_model(frame)
+            detections = results.pred[0]  # 예측 결과 가져오기
+            person_detections = detections[detections[:, 5] == 0]  # 사람 클래스만 필터링
 
+            for det in person_detections:
+                # Bounding box 좌표 추출 (x1, y1, x2, y2)
+                x1, y1, x2, y2, conf, cls = det
+
+                # 바운딩 박스 그리기
+                cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)
+
+                # 신뢰도(confidence) 표시
+                label = f"Person {conf:.2f}"
+                cv2.putText(frame, label, (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+                
+                cropped_person = frame[int(y1):int(y2), int(x1):int(x2)]
+                
+                # cropped_width, cropped_height, _ = cropped_person.shape
+                    
             # Resize the image and change dims to fit neural network input.
             # (see https://github.com/openvinotoolkit/open_model_zoo/tree/master/models/intel/human-pose-estimation-0001)
-            input_img = cv2.resize(frame, (width, height), interpolation=cv2.INTER_AREA)
-            # Create a batch of images (size = 1).
+            
+            input_img = cv2.resize(cropped_person, (width, height), interpolation=cv2.INTER_AREA)
+            # input_img = cv2.resize(frame, (width, height), interpolation=cv2.INTER_AREA)
+            
+            # Create a batch of images (size = 1). 
             input_img = input_img.transpose((2, 0, 1))[np.newaxis, ...]
 
             # Measure processing time.
@@ -568,11 +644,12 @@ def run_pose_estimation(source=0, flip=False, use_popup=False, skip_first_frames
             pafs = results[pafs_output_key]
             heatmaps = results[heatmaps_output_key]
             # Get poses from network results.
-            poses, scores = process_results(frame, pafs, heatmaps)
-
+            poses, scores = process_results(cropped_person, pafs, heatmaps)
+            # poses, scores = process_results(frame, pafs, heatmaps)
+            
             # Draw poses on a frame.
-            frame = draw_poses(frame, poses, 0.1)
-
+            frame = draw_poses(frame, poses, 0.1, int(x1), int(y1))
+            # frame = draw_poses(cropped_person, poses, 0.1)
             _, f_width = frame.shape[:2]
             
             processing_times.append(stop_time - start_time)
