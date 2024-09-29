@@ -1,0 +1,13 @@
+train: ../color_classification/train/images
+val: ../color_classification/valid/images
+test: ../color_classification/test/images
+
+nc: 10
+names: ['black', 'blue', 'brown', 'green', 'orange', 'pink', 'purple', 'red', 'white', 'yellow']
+
+roboflow:
+  workspace: testtt-3jdde
+  project: color-jim6c
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/testtt-3jdde/color-jim6c/dataset/1
