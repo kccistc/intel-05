@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Book Detection and OCR</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+            position: relative;
+        }
+        #video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            z-index: 999;
+            max-width: 250px;
+        }
+        #bounding-box {
+            position: absolute;
+            border: 2px solid red;
+            display: none;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        .click-effect {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            animation: click-effect-animation 0.5s ease-out;
+        }
+        @keyframes click-effect-animation {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(3);
+                opacity: 0;
+            }
+        }
+        #book-cover {
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" autoplay muted playsinline></video>
+    <canvas id="canvas" style="display: none;"></canvas>
+    <div id="overlay"></div>
+    <div id="bounding-box"></div>
+
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const overlay = document.getElementById('overlay');
+        const boundingBox = document.getElementById('bounding-box');
+
+        // Prevent zooming
+        document.addEventListener('gesturestart', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('gesturechange', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('gestureend', function(e) {
+            e.preventDefault();
+        });
+
+        // Get access to the camera with rear (environment) facing mode
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({
+                video: { facingMode: { exact: "environment" } }
+            })
+            .then(function(stream) {
+                video.srcObject = stream;
+                video.play();
+            })
+            .catch(function(error) {
+                console.error("Error accessing camera: ", error);
+                alert("Unable to access the rear camera. Please check your browser's camera permissions.");
+            });
+        } else {
+            alert("Your browser does not support camera access.");
+        }
+
+        function calculateScaling(video, rect) {
+            const videoRatio = video.videoWidth / video.videoHeight;
+            const elementRatio = rect.width / rect.height;
+
+            let scaleX, scaleY, offsetX, offsetY;
+
+            if (videoRatio > elementRatio) {
+                scaleX = video.videoHeight / rect.height;
+                scaleY = scaleX;
+                offsetX = (rect.width - video.videoWidth / scaleY) / 2;
+                offsetY = 0;
+            } else {
+                scaleY = video.videoWidth / rect.width;
+                scaleX = scaleY;
+                offsetY = (rect.height - video.videoHeight / scaleX) / 2;
+                offsetX = 0;
+            }
+
+            return { scaleX, scaleY, offsetX, offsetY };
+        }
+
+        video.addEventListener('click', function(event) {
+            const rect = video.getBoundingClientRect();
+            const scaling = calculateScaling(video, rect);
+
+            const clickX = (event.clientX - rect.left - scaling.offsetX) * scaling.scaleX;
+            const clickY = (event.clientY - rect.top - scaling.offsetY) * scaling.scaleY;
+
+            const context = canvas.getContext('2d');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+            // Show click effect
+            showClickEffect(event.clientX, event.clientY);
+
+            canvas.toBlob(function(blob) {
+                const formData = new FormData();
+                formData.append('image', blob, 'frame.jpg');
+                formData.append('click_x', clickX);
+                formData.append('click_y', clickY);
+
+                fetch('/process_frame', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Clear previous overlays
+                    clearOverlays();
+
+                    if (data.error) {
+                        overlay.innerHTML = `<p>${data.error}</p>`;
+                    } else {
+                        // Display book information in the overlay
+                        let bookCoverHTML = '';
+                        if (data.image) {
+                            bookCoverHTML = `<img id="book-cover" src="${data.image}" alt="Book Cover">`;
+                        }
+
+                        overlay.innerHTML = `
+                            ${bookCoverHTML}
+                            <p>Title: ${data.title}</p>
+                            <p>Author: ${data.author}</p>
+                            <p>Publisher: ${data.publisher}</p>
+                        `;
+
+                        // Show bounding box around detected book
+                        if (data.box) {
+                            const { x1, y1, x2, y2 } = data.box;
+                            const boxScaleX = rect.width / video.videoWidth;
+                            const boxScaleY = rect.height / video.videoHeight;
+
+                            boundingBox.style.left = `${x1 * boxScaleX + rect.left}px`;
+                            boundingBox.style.top = `${y1 * boxScaleY + rect.top}px`;
+                            boundingBox.style.width = `${(x2 - x1) * boxScaleX}px`;
+                            boundingBox.style.height = `${(y2 - y1) * boxScaleY}px`;
+                            boundingBox.style.display = 'block';
+                        }
+                    }
+                });
+            }, 'image/jpeg');
+        });
+
+        function showClickEffect(x, y) {
+            const clickEffect = document.createElement('div');
+            clickEffect.className = 'click-effect';
+            document.body.appendChild(clickEffect);
+
+            clickEffect.style.left = `${x}px`;
+            clickEffect.style.top = `${y}px`;
+
+            // Remove the click effect after animation ends
+            clickEffect.addEventListener('animationend', () => {
+                clickEffect.remove();
+            });
+        }
+
+        function clearOverlays() {
+            overlay.innerHTML = '';
+            boundingBox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
