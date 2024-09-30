@@ -529,8 +529,10 @@ def draw_poses(img, poses, point_score_threshold, skeleton=None):
             # 사각형 그리기
             cv2.rectangle(img, top_left, bottom_right, (255, 0, 0), 2)  # 파란색 사각형
             
+            # 특정한 영역을 추출하기 위한 좌표 생성
             x_center = (bottom_right[0] - top_left[0]) // 2 + top_left[0]
             
+            # 사람이 뒤를 돌았을 때 좌표가 반대가 되므로 x_center, x_ratio가 (-)값이 나옴. 이를 방지하기 위해 예외 조건 추가.
             if x_center <= 0:
                 x_center = (top_left[0] - bottom_right[0]) // 2 + top_left[0]
             
@@ -542,6 +544,7 @@ def draw_poses(img, poses, point_score_threshold, skeleton=None):
             
             y_ratio = int((bottom_right[1] - top_left[1]) / 10)
             
+            # color를 특정하기 위한 영역 좌표값 추출
             color_roi_x1 = int(x_center - x_ratio)
             color_roi_y1 = int(y_center - y_ratio)
             color_roi_x2 = int(x_center + x_ratio)
@@ -556,18 +559,22 @@ def draw_poses(img, poses, point_score_threshold, skeleton=None):
 def color_classification(img, frame_roi):
     x1, y1, x2, y2 = frame_roi
     
+    # x2, y2가 x1, y1보다 값이 작아 crop img의 영억이 잘못 도출되지 않도록 예외조건 추가
     if x2 <= x1 or y2 <= y1:
         print("Invalid ROI dimensions: skipping color classification")
         return img
 
+    # crop img가 (-)영역에서 도출되지 않도록 예외 조건 추가.
     cropped_img = img[y1:y2, x1:x2]
     if cropped_img.size == 0:
         print("Cropped image has zero size: skipping color classification")
         return img
     
+    # color 모델로 img 영역 색 classification 진행
     color_results = color_model(cropped_img)
     color_finds = color_results.pred[0]
     
+    # color class를 img파일에 render시키는 기능 구현
     for idx, c_clas in enumerate(color_finds):
         c_idx = c_clas[5]
         c_idx = int(c_idx.item()) if isinstance(c_idx, torch.Tensor) else int(c_idx)
