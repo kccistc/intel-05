@@ -144,4 +144,3 @@ $ find ./ -iname *.bin|xargs ls -l
   | 한태섭 | AI modeling(항해사), hand gesture detection 모델 적용. |
 * Project Github : https://github.com/KEG012/openvino-AI-project
 * 발표자료 : https://github.com/KEG012/openvino-AI-project/blob/main/doc/team4.odp
-](https://github.com/opmaksim/Signal-Project.git)
