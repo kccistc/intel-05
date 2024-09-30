@@ -1,8 +1,3 @@
-
-
-
-#%%
-
 import torch
 import collections
 import time
@@ -46,6 +41,10 @@ if not model_path.exists():
 device_name = "CPU"
 
 human_model = torch.hub.load("ultralytics/yolov5", "yolov5s")
+color_model = torch.hub.load('ultralytics/yolov5', 'custom', path='color_detection.pt', _verbose=False)
+
+color_classes = ["BLACK", "BLUE", "BROWN", "GREEN", "ORANGE", "PINK", "PURPLE", "RED", "WHITE", "YELLOW"]
+color_model.names = color_classes
 
 # Initialize OpenVINO Runtime
 core = ov.Core()
@@ -60,7 +59,6 @@ output_layers = compiled_model.outputs
 
 # Get the input size.
 height, width = list(input_layer.shape)[2:]
-
 input_layer.any_name, [o.any_name for o in output_layers]
 
 # code from https://github.com/openvinotoolkit/open_model_zoo/blob/9296a3712069e688fe64ea02367466122c8e8a3b/demos/common/python/models/open_pose.py#L135
@@ -489,52 +487,6 @@ default_skeleton = (
     (4, 6),
 )
 
-def draw_poses(img, poses, point_score_threshold, x_offset, y_offset, skeleton=None):
-    if poses.size == 0:
-        return img
-
-    img_limbs = np.copy(img)
-    for pose in poses:
-        points = pose[:, :2].astype(np.int32)  # 좌표
-        points_scores = pose[:, 2]  # 점수
-        
-        # 오른쪽 어깨 (5), 왼쪽 어깨 (6), 오른쪽 골반 (11), 왼쪽 골반 (12)
-        right_shoulder_idx = 5
-        left_shoulder_idx = 6
-        right_hip_idx = 11
-        left_hip_idx = 12
-        
-        keypoints = [right_shoulder_idx, left_shoulder_idx, right_hip_idx, left_hip_idx]
-
-        # Draw joints (only shoulders and hips).
-        for i in keypoints:
-            p = points[i]
-            v = points_scores[i]
-            if v > point_score_threshold:
-                cv2.circle(img, (p[0] + x_offset, p[1] + y_offset), 5, (0, 255, 0), -1) 
-
-        # 점수 체크 (어깨와 골반이 threshold 이상일 때만 그리기)
-        if (points_scores[right_shoulder_idx] > point_score_threshold and 
-            points_scores[left_shoulder_idx] > point_score_threshold and
-            points_scores[right_hip_idx] > point_score_threshold and 
-            points_scores[left_hip_idx] > point_score_threshold):
-            
-            # 필요한 좌표
-            right_hip = points[right_hip_idx] 
-            left_hip_x = points[left_hip_idx][0] 
-            left_shoulder_y = max(points[right_shoulder_idx][1], points[left_shoulder_idx][1])
-                        
-            # 사각형의 왼쪽 위와 오른쪽 아래 좌표 설정
-            top_left = (left_hip_x + x_offset, left_shoulder_y + y_offset) 
-            bottom_right = (right_hip[0] + x_offset, right_hip[1] + y_offset) 
-            
-            # 사각형 그리기
-            cv2.rectangle(img, top_left, bottom_right, (255, 0, 0), 2)  # 파란색 사각형
-
-    return img
-
-
-"""
 def draw_poses(img, poses, point_score_threshold, skeleton=None):
     if poses.size == 0:
         return img
@@ -557,7 +509,7 @@ def draw_poses(img, poses, point_score_threshold, skeleton=None):
             p = points[i]
             v = points_scores[i]
             if v > point_score_threshold:
-                cv2.circle(img, tuple(p), 5, (0, 255, 0), -1) 
+                cv2.circle(img, (p[0], p[1]), 5, (0, 255, 0), -1) 
 
         # 점수 체크 (어깨와 골반이 threshold 이상일 때만 그리기)
         if (points_scores[right_shoulder_idx] > point_score_threshold and 
@@ -576,9 +528,63 @@ def draw_poses(img, poses, point_score_threshold, skeleton=None):
             
             # 사각형 그리기
             cv2.rectangle(img, top_left, bottom_right, (255, 0, 0), 2)  # 파란색 사각형
-
+            
+            # 특정한 영역을 추출하기 위한 좌표 생성
+            x_center = (bottom_right[0] - top_left[0]) // 2 + top_left[0]
+            
+            # 사람이 뒤를 돌았을 때 좌표가 반대가 되므로 x_center, x_ratio가 (-)값이 나옴. 이를 방지하기 위해 예외 조건 추가.
+            if x_center <= 0:
+                x_center = (top_left[0] - bottom_right[0]) // 2 + top_left[0]
+            
+            y_center = (bottom_right[1] - top_left[1]) // 2 + top_left[1]
+            x_ratio = int((bottom_right[0] - top_left[0]) / 10)
+            
+            if x_ratio <= 0:
+                x_ratio = int((top_left[0] - bottom_right[0]) / 10)
+            
+            y_ratio = int((bottom_right[1] - top_left[1]) / 10)
+            
+            # color를 특정하기 위한 영역 좌표값 추출
+            color_roi_x1 = int(x_center - x_ratio)
+            color_roi_y1 = int(y_center - y_ratio)
+            color_roi_x2 = int(x_center + x_ratio)
+            color_roi_y2 = int(y_center + y_ratio)
+            
+            frame_color_roi = [color_roi_x1, color_roi_y1, color_roi_x2, color_roi_y2]
+            
+            color_classification(img, frame_color_roi)            
+            
     return img
-"""
+
+def color_classification(img, frame_roi):
+    x1, y1, x2, y2 = frame_roi
+    
+    # x2, y2가 x1, y1보다 값이 작아 crop img의 영억이 잘못 도출되지 않도록 예외조건 추가
+    if x2 <= x1 or y2 <= y1:
+        print("Invalid ROI dimensions: skipping color classification")
+        return img
+
+    # crop img가 (-)영역에서 도출되지 않도록 예외 조건 추가.
+    cropped_img = img[y1:y2, x1:x2]
+    if cropped_img.size == 0:
+        print("Cropped image has zero size: skipping color classification")
+        return img
+    
+    # color 모델로 img 영역 색 classification 진행
+    color_results = color_model(cropped_img)
+    color_finds = color_results.pred[0]
+    
+    # color class를 img파일에 render시키는 기능 구현
+    for idx, c_clas in enumerate(color_finds):
+        c_idx = c_clas[5]
+        c_idx = int(c_idx.item()) if isinstance(c_idx, torch.Tensor) else int(c_idx)
+        class_name = color_model.names[c_idx]
+        cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 255), 2)
+        c_label = f"Color : {class_name}"
+        cv2.putText(img, c_label, (x1-50, y1-20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,0,255), 2)
+    
+    return img
+
 # Main processing function to run pose estimation.
 def run_pose_estimation(source=0, flip=False, use_popup=False, skip_first_frames=0):
     pafs_output_key = compiled_model.output("Mconv7_stage2_L1")
@@ -606,30 +612,33 @@ def run_pose_estimation(source=0, flip=False, use_popup=False, skip_first_frames
             if scale < 1:
                 frame = cv2.resize(frame, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
             
+            frame_height, frame_width = frame.shape[:2]
+            zero_frame = np.zeros_like(frame)
+            
             # YOLO 모델로 사람 탐지
             results = human_model(frame)
-            detections = results.pred[0]  # 예측 결과 가져오기
-            person_detections = detections[detections[:, 5] == 0]  # 사람 클래스만 필터링
-
-            for det in person_detections:
+            detections = results.pred[0]
+            person_detections = detections[detections[:, 5] == 0]
+            
+            for idx ,det in enumerate(person_detections):
                 # Bounding box 좌표 추출 (x1, y1, x2, y2)
                 x1, y1, x2, y2, conf, cls = det
 
+                x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
+                
+                cropped_person = frame[y1:y2, x1:x2]
+                zero_frame[y1:y2, x1:x2] = cropped_person
                 # 바운딩 박스 그리기
-                cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
                 # 신뢰도(confidence) 표시
                 label = f"Person {conf:.2f}"
                 cv2.putText(frame, label, (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
-                
-                cropped_person = frame[int(y1):int(y2), int(x1):int(x2)]
-                
-                # cropped_width, cropped_height, _ = cropped_person.shape
                     
             # Resize the image and change dims to fit neural network input.
             # (see https://github.com/openvinotoolkit/open_model_zoo/tree/master/models/intel/human-pose-estimation-0001)
             
-            input_img = cv2.resize(cropped_person, (width, height), interpolation=cv2.INTER_AREA)
+            input_img = cv2.resize(zero_frame, (width, height), interpolation=cv2.INTER_AREA)
             # input_img = cv2.resize(frame, (width, height), interpolation=cv2.INTER_AREA)
             
             # Create a batch of images (size = 1). 
@@ -644,11 +653,11 @@ def run_pose_estimation(source=0, flip=False, use_popup=False, skip_first_frames
             pafs = results[pafs_output_key]
             heatmaps = results[heatmaps_output_key]
             # Get poses from network results.
-            poses, scores = process_results(cropped_person, pafs, heatmaps)
+            poses, scores = process_results(zero_frame, pafs, heatmaps)
             # poses, scores = process_results(frame, pafs, heatmaps)
             
             # Draw poses on a frame.
-            frame = draw_poses(frame, poses, 0.1, int(x1), int(y1))
+            frame = draw_poses(frame, poses, 0.1)
             # frame = draw_poses(cropped_person, poses, 0.1)
             _, f_width = frame.shape[:2]
             
