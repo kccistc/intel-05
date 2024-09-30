@@ -162,3 +162,21 @@ $ find ./ -iname *.bin|xargs ls -l
   | 한태섭 | AI modeling(항해사), hand gesture detection 모델 적용. |
 * Project Github : https://github.com/KEG012/openvino-AI-project
 * 발표자료 : https://github.com/KEG012/openvino-AI-project/blob/main/doc/team4.odp
+
+### Team: 테일러스위프트
+<스마트 캐리어>
+  - 목적: 사용자를 인식 후, 사용자를 따라다니는 캐리어
+  - 문제: 배달이 안되는 특수한 상황에서 몸이 불편한 사람들이 많은 짐을 옮길 도구가 필요하다 생각함.
+  - 목표
+    - 1) 카트를 직접 끌지 않음으로써 두 손의 자유를 제공
+    - 2) 웨어러블 기기를 사용하지 않고 사람을 추적함으로 사용자의 부담을 제거.
+  - 방법: AI 기술 및 IT 기술 적용
+* Members
+  | Name | Role |
+  |----|----|
+  | 장성민 | Project leading(선장),프로젝트를 총괄, persondetect, 특징추출모델생성  |
+  | 김지환 | Project managing(엔지니어), harddware setting.  |
+  | 최재원 | Back-end Building(갑판장), 거리측정 프로그램 개발. |
+  | 정진우 | AI modeling(항해사), harddware setting, 모델검수 . |
+* Project Github : https://github.com/JinwooJungFromSouthKorea/05_tailer-swift
+* 발표자료 : https://github.com/JinwooJungFromSouthKorea/05_tailer-swift/blob/main/09.pptx
