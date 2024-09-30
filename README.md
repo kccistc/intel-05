@@ -106,6 +106,25 @@ $ find ./ -iname *.bin|xargs ls -l
 * Project Github : https://github.com/yspsk1994/AI_Team_1.git
 * 발표자료 : https://github.com/yspsk1994/AI_Team_1.git/doc/presentation.ppt
 
+### Team: SignalMasters
+<교통 제어 수신호 인식 시스템>
+  - 목적: 교통 제어 수신호 인식 및 사고 예방
+  - 문제: 수신호 도중 사망사고 예방 및 원활한 교통 환경 조성
+    - 1) 자동차전용도로서 '차 고장 수신호' 하던 60대, SUV에 치여 사망 (24.03)
+    - 2) '차량 고장' 수신호 하다 참변...뒷차에 치여 사망 (24.09)
+  - 목표: 문제 개선을 통해
+    - 1) 교통 제어 수신호 인식 모델 확립
+    - 2) 차량 고장 도중 사망사고 예방
+  - 방법: AI 기술 및 IT 기술 적용
+* Members
+  | Name | Role |
+  |----|----|
+  | 서창민 | Project leading(선장),프로젝트를 총괄 및 AI Machine Learning |
+  | 박준수 | Project managing(엔지니어), 모델/모듈 별 성능 분석 및 이력 관리, 이슈 공유. |
+  | 김도하 | Back-end Building(갑판장), 프로젝트 토대가 되는 DataBase 구현, 사서 현직 인터뷰 내용 수집. |
+* Project Github : https://github.com/opmaksim/Signal-Project.git
+* 발표자료 : https://github.com/opmaksim/Signal-Project/blob/main/doc/presentation.pptx
+
 ### Team: 쫒GO
 <스마트 캐리어, 스마트 카트>
   - 목적: 사람의 제스처 인식 후, 사람의 뒤를 따르는 체이싱 카트
