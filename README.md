@@ -105,3 +105,23 @@ $ find ./ -iname *.bin|xargs ls -l
   | 정상훈 | AI modeling(항해사), 타겟 모델 결과가 나오도록 AI model을 선택, data 수집, training 수행. |
 * Project Github : https://github.com/yspsk1994/AI_Team_1.git
 * 발표자료 : https://github.com/yspsk1994/AI_Team_1.git/doc/presentation.ppt
+
+### Team: 쫒GO
+<스마트 캐리어, 스마트 카트>
+  - 목적: 사람의 제스처 인식 후, 사람의 뒤를 따르는 체이싱 카트
+  - 문제: 개인의 짐을 옮길 상황이 증가
+    - 1) 골프장 캐디 인력 구인 난등 직접 짐을 옮기는것에 대한 거부감 증가
+    - 2) 신체적 장애인들을 위한 캐리어 서비스의 필요
+  - 목표: 문제 개선을 통해
+    - 1) 카트를 직접 끌지 않음으로써 두 손의 자유를 제공
+    - 2) 손의 제스처를 통해 원격 제어 서비스 제공
+  - 방법: AI 기술 및 IT 기술 적용
+* Members
+  | Name | Role |
+  |----|----|
+  | 김동현 | Project leading(선장),프로젝트를 총괄, harddware setting  |
+  | 고의근 | Project managing(엔지니어), person detect & color classification Model 생성. |
+  | 김은찬 | Back-end Building(갑판장), 모델/모듈 별 성능 분석 및 이력 관리, hardware setting. |
+  | 한태섭 | AI modeling(항해사), hand gesture detection 모델 적용. |
+* Project Github : https://github.com/KEG012/openvino-AI-project
+* 발표자료 : 
