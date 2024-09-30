@@ -79,7 +79,7 @@
 <br>   
 
 - ### 출력된 image (Bounding Box Resize)
-
+![UpperBodyCrop1](https://github.com/kccistc/intel-05/blob/class01-05-keg-kdh/class01/mini-project/05-KEG-KDH/image/capture_human_detection1.png)
 <br>   
 
 ## Zero Image에 Crop된 Bounding Box Image를 삽입한 Image를 resize 했을 때의 결과
