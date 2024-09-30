@@ -79,7 +79,8 @@
 <br>   
 
 - ### 출력된 image (Bounding Box Resize)
-![UpperBodyCrop1](https://github.com/kccistc/intel-05/blob/class01-05-keg-kdh/class01/mini-project/05-KEG-KDH/image/capture_human_detection1.png)
+![UpperBodyCrop1](https://github.com/kccistc/intel-05/blob/class01-05-keg-kdh/class01/mini-project/05-KEG-KDH/image/capture_pose_estimation1.png)
+![UpperBodyCrop2](https://github.com/kccistc/intel-05/blob/class01-05-keg-kdh/class01/mini-project/05-KEG-KDH/image/capture_pose_estimation2.png)
 <br>   
 
 ## Zero Image에 Crop된 Bounding Box Image를 삽입한 Image를 resize 했을 때의 결과
@@ -87,7 +88,11 @@
 <br>   
 
 - ### 출력된 image (Insert Zero Image Resize)
-
+![UpperBodyCropColorClassification1](https://github.com/kccistc/intel-05/blob/class01-05-keg-kdh/class01/mini-project/05-KEG-KDH/image/color_classification_black.png)
+![UpperBodyCropColorClassification1](https://github.com/kccistc/intel-05/blob/class01-05-keg-kdh/class01/mini-project/05-KEG-KDH/image/color_classification_green.png)
+![UpperBodyCropColorClassification1](https://github.com/kccistc/intel-05/blob/class01-05-keg-kdh/class01/mini-project/05-KEG-KDH/image/color_classification_white.png)
+![UpperBodyCropColorClassification1](https://github.com/kccistc/intel-05/blob/class01-05-keg-kdh/class01/mini-project/05-KEG-KDH/image/color_classification_error.png)
+- 색을 분류할 때 모델 학습에 문제가 있어 Yellow를 Blue로 판단
 <br>   
 
 # 시연 결과 분석
