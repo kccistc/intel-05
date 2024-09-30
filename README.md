@@ -86,3 +86,22 @@ $ find ./ -iname *.bin|xargs ls -l
 * Project Github : https://github.com/goodsense/project_awesome.git
 * 발표자료 : https://github.com/goodsense/project_aewsome/doc/slide.ppt
 
+### Team: 북텔5기
+<스마트 AI 도서관 (관리) 시스템>
+  - 목적: 사서 및 관리자 업무 보조 시스템 (+도서관 이용자 편의 지향)
+  - 문제: 최근 사서직 구인난 환경 속에서
+    - 1) 사서직의 과중된 업무량
+    - 2) 현행 업무환경의 제약
+  - 목표: 문제 개선을 통해
+    - 1) 사서직 업무 업무량 경감 및 효율 향상
+    - 2) 도서관 이용자 UX 혁신
+  - 방법: AI 기술 및 IT 기술 적용
+* Members
+  | Name | Role |
+  |----|----|
+  | 윤태준 | Project leading(선장),프로젝트를 총괄 및 AI Machine Learning |
+  | 정태현 | Project managing(엔지니어), 모델/모듈 별 성능 분석 및 이력 관리, 이슈 공유. |
+  | 최정호 | Back-end Building(갑판장), 프로젝트 토대가 되는 DataBase 구현, 사서 현직 인터뷰 내용 수집. |
+  | 정상훈 | AI modeling(항해사), 타겟 모델 결과가 나오도록 AI model을 선택, data 수집, training 수행. |
+* Project Github : https://github.com/yspsk1994/AI_Team_1.git
+* 발표자료 : https://github.com/yspsk1994/AI_Team_1.git/doc/presentation.ppt
