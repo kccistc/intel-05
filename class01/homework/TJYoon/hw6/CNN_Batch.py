@@ -63,7 +63,7 @@ loss='sparse_categorical_crossentropy',
 metrics=['accuracy'],
 )
 
-# history = log 뽑아냄.
+# history = log 뽑아냄.11
 
 history = model.fit(image_train, label_train, 
           validation_data = val_dataset,
