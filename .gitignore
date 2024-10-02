@@ -2,4 +2,5 @@
 *.swp
 .venv*/
 .vscode/
-*.h5
+.pt
+

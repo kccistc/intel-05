@@ -1,0 +1,25 @@
+# OpenVINO Toolkit
+openvino>=2023.1.0
+
+# OpenCV for Python
+opencv-python>=4.5.3
+
+# Matplotlib for plotting
+matplotlib>=3.4.0
+
+# Numpy for numerical computations
+numpy>=1.21.0
+
+# Requests for handling HTTP requests
+requests>=2.25.0
+
+# PySerial for serial communication
+pyserial>=3.5
+
+# Jupyter Notebook utility functions (from OpenVINO Notebooks)
+ipython>=7.16.1
+
+# Tkinter for GUI popups (usually built-in, no need to install for most systems)
+
+# Typing extensions for Optional typing
+typing-extensions>=3.7.4.3
