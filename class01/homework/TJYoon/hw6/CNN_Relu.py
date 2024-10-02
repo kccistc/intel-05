@@ -10,7 +10,7 @@ mnist = tf.keras.datasets.fashion_mnist
 (image_train_, label_train_),(image_test, label_test) = mnist.load_data()
 image_train_, image_test = image_train_/255.0, image_test/255.0
 
-#validation data 만들기
+#validation data 만들기11
 ## label은 1차원!
 
 image_train = image_train_[:1000, : , :]

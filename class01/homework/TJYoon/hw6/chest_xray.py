@@ -44,7 +44,7 @@ img_plot = plt.imshow(sic_load)
 a2.set_title('Pneumonia')
 plt.show()
 
-
+##
 #cnn = Sequential()
 #Convolution
 model_in = Input(shape = (64, 64, 3))
