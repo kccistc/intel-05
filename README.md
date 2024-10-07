@@ -178,5 +178,5 @@ $ find ./ -iname *.bin|xargs ls -l
   | 김지환 | Project managing(엔지니어), harddware setting.  |
   | 최재원 | Back-end Building(갑판장), 거리측정 프로그램 개발. |
   | 정진우 | AI modeling(항해사), harddware setting, 모델검수 . |
-* Project Github : https://github.com/JinwooJungFromSouthKorea/05_tailer-swift
-* 발표자료 : https://github.com/JinwooJungFromSouthKorea/05_tailer-swift/blob/main/09.pptx
+* Project Github : https://github.com/jsamez/05-tailer-swift
+* 발표자료 : https://github.com/jsamez/05-tailer-swift/blob/main/SmartCarrier.pptx
