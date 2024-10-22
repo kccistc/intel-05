@@ -48,7 +48,7 @@
 | 06 ParkInHyuk (FaceDown77) | n/a | o | o | o | o | o | o | justinkimceo |
 | 07 JungSangHun (radon99) | n/a | o | o | o | o | o | o | justinkimceo |
 | 08 SeoChangMin (opmaksim) | n/a | o | o | o | o | o | o | justinkimceo |
-| 19 KimDoHa (kimdoha123) | n/a | o | o | o | o | o | o | justinkimceo |
+| 09 KimDoHa (kimdoha123) | n/a | o | o | o | o | o | o | justinkimceo |
 | 10 ChoiJeongHo1 (Davi-kr) | n/a | - | o | o | o | o | o | justinkimceo |
 | 11 Jomyeonggeun (myeongeunJo) | n/a | o | o | o | o | o | - | justinkimceo |
 | 12 YoonTaeJoon (yspsk1994) | n/a | o | o | o | - | o | o | justinkimceo |
