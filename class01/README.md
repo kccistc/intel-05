@@ -57,7 +57,8 @@
 | 15 KoEuiGeun  (KEG012) | n/a | o | o | o | o | o | o | justinkimceo |
 | 16 ChoiJaeWon (te31eawq) | n/a | o | o | o | o | o | o | justinkimceo |
 | 17 JungJinWoo  (JinwooJung) | n/a | o | o | o | o | o | o | justinkimceo |
-| 18 JangSungMin (jsamez) | n/a | o | o | o | o | o | o | justinkimceo |
+| 18 KimJiHwan (12borang) | n/a | o | o | o | o | o | o | justinkimceo |
+| 19 JangSungMin (jsamez) | n/a | o | o | o | o | o | o | justinkimceo |
 
 ### Mini Projects
 
