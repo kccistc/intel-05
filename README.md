@@ -138,12 +138,12 @@ _자율주행 로봇과 객체인식이 적용된 순찰 로봇_
 * Members
   | Name | Role |
   |----|----|
-  | 권시우 | RC카 조립, 모터 구동부 작업, 객체인식 모델 트레이닝 |
-  | 박정우 | RC카 조립, 무선 컨트롤러 작업, 무선 통신 구성 |
+  | 권시우 | RC카 조립, 모터 구동부 작업, 객체인식 모델 트레이닝, 작업파일 병합 |
+  | 박정우 | RC카 조립, 무선 컨트롤러 작업, 무선 통신 구성 및 고도화 |
   | 조명근 | 트레이닝 모델 파이 적용 및 최적화 작업, 영상처리 최적화 |
-  | 박인혁 | ~~ROS2 베이스의 Lidar Sensor & 자율주행 담당~~ <br> (조장) 시스템 설계, ROS 사용검토, 작업파일 병합 및 디버깅 |
+  | 박인혁 | ~~ROS2 베이스의 Lidar Sensor & 자율주행 담당~~ <br> (조장) 시스템 설계, ROS검토, 작업파일 병합 및 디버깅, 프로젝트 관리 |
 * Project Github : https://github.com/FaceDown77/intel-class-PJT03.git
-* 발표자료 : https://github.com/FaceDown77/intel-class-PJT03.git/doc/presentation.pptx
+* 발표자료 : https://github.com/FaceDown77/intel-class-PJT03.git/doc/GuardRover_presentation.pptx
 
 ### Team: 쫒GO
 <스마트 캐리어, 스마트 카트>
